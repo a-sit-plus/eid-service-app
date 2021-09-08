@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ServiceApp</string>
+    <string name="oidc">OIDC Web</string>
+    <string name="oidc_native">OIDC Native</string>
+</resources>
