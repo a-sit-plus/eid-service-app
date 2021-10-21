@@ -28,13 +28,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @NotNull
     @Override
     public Fragment getItem(int position) {
-        switch (position) {
-            case 0:
-                return OidcFragment.newInstance();
-            default:
-            case 1:
-                return OidcNativeFragment.newInstance();
-        }
+        return OidcFragment.newInstance();
     }
 
     public static void changeTab(Activity activity, int index) {

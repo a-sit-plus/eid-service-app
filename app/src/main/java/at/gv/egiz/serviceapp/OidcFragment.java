@@ -28,7 +28,7 @@ public class OidcFragment extends Fragment {
 
     private static final String PARAM_ERROR_DESCRIPTION = "error_description";
 
-    private final NativeOidcConfig config = new NativeOidcConfig();
+    private final OidcConfig config = new OidcConfig();
 
     public static OidcFragment newInstance() {
         return new OidcFragment();

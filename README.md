@@ -23,23 +23,6 @@ In case of a successful authentication, the E-ID app opens an intent for `https:
 
 Then the service app can use the URL to load it in the WebView. The back-end service will get an access token on the back-end channel an log the user in. 
 
-## Native client 
-
-Example running with the relying party at `https://eid.a-sit.at/notes-api` and the authorization server at `eid.egiz.gv.at` (button `Native` in app).
-
-The app starts fresh, with no access token stored.
-
-This app opens an intent for `https://eid.egiz.gv.at/idp/profile/oidc/authorize?response_type=code&client_id=https%3A%2F%2Feid.a-sit.at%2Fnotes&scope=openid&state=...&redirect_uri=at.asitplus.notes.app%3A%2Foauth2redirect`
- - The URL points to the authorization server
- - Parameters `response_type`, `client_id`, `scope`, `state` are needed for a typical OpenId Connect flow
- - Parameter `redirect_uri` is also needed, and points to an URL registered for this app, i.e. a custom URL scheme registered in the [AndroidManifest](./app/src/main/AndroidManifest.xml)
- 
-In case of a successful authentication, the E-ID app opens an intent for `at.asitplus.notes.app:/oauth2redirect?code=...&state=...`
- - The URL points to the `redirect_uri` from before
- - Parameters `code` and `state` are the default OpenId Connect parameters
-
-Then the service app can use the authorization code to get an access and ID token from the authorization server. It will then use the ID token to access its back-end API.
-
 ## Libraries
 
 This app uses the following libraries:
