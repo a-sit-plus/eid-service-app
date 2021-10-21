@@ -11,8 +11,6 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.google.android.material.tabs.TabLayout;
 
-import org.jetbrains.annotations.NotNull;
-
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
@@ -25,7 +23,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         mContext = context;
     }
 
-    @NotNull
     @Override
     public Fragment getItem(int position) {
         return OidcFragment.newInstance();
