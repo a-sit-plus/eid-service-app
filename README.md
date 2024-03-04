@@ -1,6 +1,6 @@
 # Demo E-ID Service App
 
-This app demonstrates OpenId Connect authentication using the E-ID demo app from <https://eid.a-sit.at>. This app will open an intent carrying an HTTPS URL, which will be picked up by the E-ID app, if installed, or in the browser otherwise.
+This app demonstrates OpenId Connect authentication using the E-ID demo app from <https://eid.a-sit.at>. This app will open an intent carrying an HTTPS URL, which will be picked up by the E-ID app, if it is installed. Otherwise, a custom browser tab will be opened to handle authentication at the ID Austria system.
 
 Use case for a web client: App contains a WebView, back-end service handles OpenId Connect login on their own.
 
@@ -25,5 +25,6 @@ Then the service app can use the URL to load it in the WebView. The back-end ser
 
 This app uses the following libraries:
  - Material Components for Android, [Github](https://github.com/material-components/material-components-android), licensed under the [Apache License 2.0](https://github.com/material-components/material-components-android/blob/master/LICENSE)
+ - Browser, [Github](https://github.com/androidx/androidx/tree/androidx-main/browser), licensed under the [Apache License 2.0](https://github.com/androidx/androidx/blob/androidx-main/LICENSE.txt)
  - ConstraintLayout, [Github](https://github.com/androidx/constraintlayout), licensed under the [Apache License 2.0](https://github.com/androidx/constraintlayout/blob/main/LICENSE)
  - Appcompat, [Android](https://developer.android.com/jetpack/androidx/releases/appcompat), licensed under the Apache License 2.0

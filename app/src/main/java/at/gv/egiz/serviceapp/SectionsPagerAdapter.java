@@ -3,6 +3,7 @@ package at.gv.egiz.serviceapp;
 import android.app.Activity;
 import android.content.Context;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
@@ -11,6 +12,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.google.android.material.tabs.TabLayout;
 
+/** @noinspection deprecation*/
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
@@ -23,6 +25,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         mContext = context;
     }
 
+    @NonNull
     @Override
     public Fragment getItem(int position) {
         return OidcFragment.newInstance();

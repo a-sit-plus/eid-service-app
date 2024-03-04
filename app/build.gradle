@@ -50,6 +50,9 @@ android {
     lint {
         abortOnError false
     }
+    packagingOptions {
+        pickFirst('META-INF/kotlinx_coroutines_core.version')
+    }
 }
 
 repositories {

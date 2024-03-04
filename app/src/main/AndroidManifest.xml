@@ -5,18 +5,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <queries>
-        <intent>
-            <action android:name="android.intent.action.VIEW" />
-            <data
-                android:host="www.oesterreich.gv.at"
-                android:scheme="https" />
-        </intent>
-        <intent>
-            <action android:name="android.intent.action.VIEW" />
-            <data
-                android:host="eid.egiz.gv.at"
-                android:scheme="https" />
-        </intent>
+        <package android:name="at.gv.oe.app" />
+        <package android:name="at.gv.oe.app.q" />
+        <package android:name="at.gv.oe.app.t" />
+        <package android:name="at.asitplus.eidappandroid" />
     </queries>
 
     <application
