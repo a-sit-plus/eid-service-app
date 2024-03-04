@@ -9,11 +9,11 @@ android {
             storePassword 'changeit'
         }
     }
-    compileSdkVersion 31
+    compileSdkVersion 34
     defaultConfig {
         applicationId "at.gv.egiz.serviceapp"
         minSdkVersion 23
-        targetSdkVersion 31
+        targetSdkVersion 34
         versionCode project.ext.internalVersionCode as Integer
         versionName "${project.ext.internalVersionName}"
         version = "${project.ext.internalVersionName}"
@@ -46,7 +46,8 @@ android {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
-    lintOptions {
+    namespace 'at.gv.egiz.serviceapp'
+    lint {
         abortOnError false
     }
 }
@@ -57,7 +58,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
-    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.browser:browser:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.11.0'
 }
