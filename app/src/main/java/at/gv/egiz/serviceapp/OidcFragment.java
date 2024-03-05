@@ -178,22 +178,19 @@ public class OidcFragment extends Fragment {
     }
 
     /**
-     * Checks if the E-ID app is installed, depending on the login URL of our backend.
-     * <p>
-     * Note that this code is customized to the SP running at <a href="https://eid.a-sit.at/notes">eid.a-sit.at/notes</a>
-     * and may need to be adapted to only check for "at.gv.oe.app"
+     * Checks if the E-ID app is installed, depending on the URL the SP backend is redirecting to.
      * <p>
      * Be sure to declare these package names in your AndroidManifest.xml under {@code <queries>},
      * see <a href="https://developer.android.com/training/package-visibility/declaring#package-name">Android Docs</a>.
      */
     private boolean checkInstalledApp(String url) {
-        if (url.endsWith("eidp")) {
+        if (url.contains("eid.oesterreich.gv.at")) {
             return isPackageInstalled("at.gv.oe.app");
-        } else if (url.endsWith("eidq")) {
+        } else if (url.contains("eid2.oesterreich.gv.at")) {
             return isPackageInstalled("at.gv.oe.app.q")
                     || isPackageInstalled("at.gv.oe.app")
                     || isPackageInstalled("at.asitplus.eidappandroid");
-        } else if (url.endsWith("eidt")) {
+        } else if (url.contains("eid3.oesterreich.gv.at")) {
             return isPackageInstalled("at.gv.oe.app.t")
                     || isPackageInstalled("at.asitplus.eidappandroid");
         } else {
